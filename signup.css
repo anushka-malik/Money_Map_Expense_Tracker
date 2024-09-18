@@ -1,0 +1,91 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    height:100vh;
+    width:100vw;
+    border: 2px solid black;
+    background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.4)),url("https://tse1.mm.bing.net/th?id=OIP.CVdNwT-2bu5B_zU810V6iQHaEL&pid=Api&P=0&h=180");
+    /* background-color: black; */
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+
+.form-box{
+    width:400px;
+    height:400px;
+    background-color: #fff;
+    position:absolute;
+    translate: (-50%,-50%);
+    top:100px;
+    left:500px;
+    text-align:center;
+}
+
+.form-box h1{
+    padding-top: 10px;
+    font-size:40px;
+    margin-bottom: 60px;
+    color:#3c00a0;
+    position: relative;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.form-box h1::after{
+  content:'';
+  width:30px;
+  height: 4px;
+  border-radius:3px;
+  background: #3c00a0;
+  position: absolute;
+  bottom: -12px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.input-field{
+     background-color: #eaeaea;
+     margin: 15px 0px;
+     border-radius:3px;
+     display: flex;
+     align-items: center;
+     max-height: 65px;
+     transition: display 1s;
+     overflow: hidden;
+}
+
+input{
+    width:100%;
+    background:transparent;
+     border:0;
+    outline: 0;        
+    padding: 18px 15px;
+}
+.btn-field{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    flex-basis:48%;
+    color:#fff;
+    background: #3c00a0;
+    height:40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    /* transition: background 1s; */
+
+}
+
+.btn-field button.disable{
+    background: #eaeaea;
+    color:#555;
+}
