@@ -1,0 +1,97 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.text {
+    height: 210px;
+    width: 640px;
+    margin: 100px auto;
+}
+
+.heading {
+    text-align: center;
+    margin: auto auto;
+    font-size: 50px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.red {
+    color: red;
+}
+
+.descr {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(62, 60, 60);
+    font-weight: 100;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+
+.cardcontainer {
+    height: auto;  
+    width: 76vw;
+    margin-top: -100px;
+    margin-left: auto;  
+    margin-right: auto;  
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 20px;  
+}
+
+.card {
+    position: relative; 
+    height: 350px;
+    width: 330px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: url("Blue-money-icon.jpg");
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;
+    margin: 10px;  
+    transition: transform 1s, box-shadow 0.3s;  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); 
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white; 
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 25px; 
+}
+.card-title{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-top:60px;
+    text-align: center;
+    color: #fff;
+}
+
+.card-matter{
+    margin:30px auto;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.card:hover {
+    transform: scale(1.05);  
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);  
+    
+}
