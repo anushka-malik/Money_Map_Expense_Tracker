@@ -43,10 +43,7 @@ body {
     width: 100%;
     position: relative;
     border: 2px solid black;
-    background: linear-gradient(
-        rgba(0, 0, 50, 0.3),
-        rgba(0, 0, 70, 0.3)
-    ), url("office-image.jpg");
+    background: url("stock.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

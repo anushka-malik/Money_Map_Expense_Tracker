@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="serv.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand"><span>MONEY</span> <span>MAP</span></a>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#services">SERVICES</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#login" class="login-btn">-LOGIN-</a>
+        </div>
+    </nav>
+    <section id="services">
     <div class="text">
      <div class="heading">
         SERV<span class="red">I</span>CES
+    </div>
+       <div class="para">
         <p class="descr">MoneyMap provides many services to the customers.
             Financial solutions to meet your needs whatever your
             money goals, there is MoneyMap solution to help you
             reach them.
         </p>
-     </div>
+    </div>
     </div>
     <div class="cardcontainer">
         <div class="card">
@@ -36,10 +49,14 @@
                 <p class="card-matter">Follow your investments and bring your portfolioi into focus with support for stocks,bonds, CDs ,mutual funds and more.</p>
             </div>
         </div>
+    </section>
         
-        
-        
-        
+        <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }   
+        </script>
     
 </body>
 </html>

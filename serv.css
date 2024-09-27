@@ -1,23 +1,76 @@
-* {
-    margin: 0px;
-    padding: 0px;
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+    padding-top: 80px;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-brand span:first-child {
+    color: #e74c3c;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
 .text {
-    height: 210px;
-    width: 640px;
-    margin: 100px auto;
+    width: 90%;
+    max-width: 640px;
+    margin: 50px auto;
+    text-align: center;
 }
 
 .heading {
-    text-align: center;
-    margin: auto auto;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 100;
-    font-family: sans-serif;
     color: black;
     letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
 .red {
@@ -25,73 +78,132 @@
 }
 
 .descr {
-    margin-top: 15px;
-    padding: 10px;
-    font-size: 20px;
-    font-family: sans-serif;
+    font-size: 18px;
     color: rgb(62, 60, 60);
     font-weight: 100;
-    letter-spacing: 3px;
-    word-spacing: 4px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 1.5;
 }
 
 .cardcontainer {
-    height: auto;  
-    width: 76vw;
-    margin-top: -100px;
-    margin-left: auto;  
-    margin-right: auto;  
-    /* border: 2px solid black; */
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; 
-    padding: 20px;  
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    position: relative; 
+    position: relative;
     height: 350px;
-    width: 330px;
+    width: 100%;
+    max-width: 330px;
     border: 2px solid black;
     border-radius: 15px;
-    background: url("Blue-money-icon.jpg");
-    background-size: cover;  
-    background-position: center;  
-    background-repeat: no-repeat;
-    margin: 10px;  
-    transition: transform 1s, box-shadow 0.3s;  
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); 
+    background: url("Blue-money-icon.jpg") center/cover no-repeat;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .overlay {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white; 
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 25px; 
-}
-.card-title{
-    font-size: 25px;
-    font-family: sans-serif;
-    margin-top:60px;
+    position: absolute;
+    inset: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #fff;
 }
 
-.card-matter{
-    margin:30px auto;
+.card-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card-matter {
     font-size: 16px;
-    font-family: sans-serif;
-    text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 
 .card:hover {
-    transform: scale(1.05);  
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);  
-    
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 10px 5%;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .descr {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .descr {
+        font-size: 14px;
+    }
+    .text{
+        margin-top:120px;
+    }
+    .card {
+        height: 300px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-matter {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    body {
+        padding-top: 200px;
+    }
 }
