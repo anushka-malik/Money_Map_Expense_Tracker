@@ -5,7 +5,9 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
+.outer {
+    height: 100vh;
+    width: 100vw;
     background-image:url('scenic-image.jpg');
     opacity: 0.9;
     background-size: cover;
@@ -13,7 +15,7 @@ body {
     background-repeat: no-repeat;
   }
   
-body::before {
+.outer::before {
     content: "";
     position: absolute;
     top: 0;
@@ -29,7 +31,7 @@ body::before {
     z-index: 1;
     color: white; 
 }
-.container {
+.signcontainer {
     min-height: 100vh;
     display: flex;
     justify-content: center;

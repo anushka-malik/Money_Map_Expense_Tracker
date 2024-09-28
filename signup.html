@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="signup.css">    
 </head>
 <body>
-    <div class="container">
+  <section id="signup">
+    <div class="signcontainer">
       <div class="content-wrapper">
         <div class="form-box">
             <h1 id="title">Sign Up</h1>
@@ -42,6 +43,7 @@
         </div>
       </div>
     </div>
+  </section>
 
     <script>
      let signupBtn = document.getElementById("signupBtn");
@@ -78,16 +80,11 @@
             users.push(user);
             localStorage.setItem("all_users", JSON.stringify(users));
 
-            // Set current user in session storage
             sessionStorage.setItem("currentUser", JSON.stringify(user));
 
-            // Add the new user to the list
             addUserToList(name);
 
-            // Update logged in user display
             updateLoggedInUser();
-
-            // Clear the form
             form.reset();
         } else {
             alert("Please fill in all fields");
@@ -109,7 +106,6 @@
         }
     }
 
-    // Load existing users from local storage and update logged in user when the page loads
     window.onload = function() {
         let users = JSON.parse(localStorage.getItem("all_users")) || [];
         users.forEach(user => addUserToList(user.name));
