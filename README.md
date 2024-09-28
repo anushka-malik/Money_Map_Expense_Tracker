@@ -1,6 +1,5 @@
 # Money_Map_Expense_Tracker Web Application
 
-!["C:\Users\am881\OneDrive\Documents\Web-Expense-Tracker\stock.jpg"](https://github.com/anushka-malik/Money_Map_Expense_Tracker.git)
 
 ## Table of Contents
 
@@ -9,7 +8,6 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -77,9 +75,6 @@ To get a local copy up and running, follow these simple steps:
       remove it.
 - Monitor Your Balance:
    *  Your total income, expenses, and remaining balance will be displayed at the top.
-
-## Screenshots
-### Dashboard
 
 
 ## Contributions
