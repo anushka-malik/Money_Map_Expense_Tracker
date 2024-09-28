@@ -1,6 +1,5 @@
 # Money_Map_Expense_Tracker Web Application
 
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -8,7 +7,8 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Contributions](#contributions)
+- [Screenshots](#screenshots)
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
@@ -94,6 +94,19 @@ Contributions are welcome! If you have suggestions for improvements or find bugs
     git push origin feature/AmazingFeature
     ```
 5. ***Open a Pull Request***
+
+## Screenshots
+
+### Dashboard
+![Screenshot (278)](https://github.com/user-attachments/assets/c6fc80fb-3a42-4f49-a60a-3b69645ebe27)
+
+
+### Expense tracker 
+![Screenshot (280)](https://github.com/user-attachments/assets/02cf3f20-5e7f-4a49-9ec0-7896163e471a)
+
+### User-authentication
+![Screenshot (279)](https://github.com/user-attachments/assets/5db2ce35-08f9-4242-9cd8-7c260fbc516c)
+
 
 ## Acknowledgments
 1. Inspired by various personal finance management applications.
