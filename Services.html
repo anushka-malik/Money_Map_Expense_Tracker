@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="serv.css">
 </head>
 <body>
-   
+     
      <nav class="navbar">
         <a href="#" class="navbar-brand"><span>MONEY</span> <span>MAP</span></a>
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -58,13 +58,13 @@
             <div class="card">
                 <div class="overlay">
                     <h2 class="card-title">FINANCIAL LIFE</h2>
-                    <p class="card-matter">Get your complete financial picture at a glance. With MoneyMap application you cam view all your financial activities.</p>
+                    <p class="card-matter">Get your complete financial picture at a glance. With MoneyMap application you can view all your financial activities.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="overlay">
                     <h2 class="card-title">INVESTMENTS</h2>
-                    <p class="card-matter">Follow your investments and bring your portfolioi into focus with support for stocks,bonds, CDs ,mutual funds and more.</p>
+                    <p class="card-matter">Follow your investments and bring your portfolio into focus with support for stocks, bonds, CDs, mutual funds, and more.</p>
                 </div>
             </div>
         </div>
@@ -92,51 +92,104 @@
             <div class="wrapper">
                 <img src="address-icon-1.png" alt="Address icon">
                 <h3>Address</h3>
-                <p>Kamboj Colony,Shamli</p>
-                <p>Uttar Pradesh,India</p>
+                <p>Kamboj Colony, Shamli</p>
+                <p>Uttar Pradesh, India</p>
             </div>
         </div>
     </section>
+
     <section id="signup">
         <div class="outer">
-        <div class="signcontainer">
-          <div class="content-wrapper">
-            <div class="form-box">
-                <h1 id="title">Sign Up</h1>
-                <form id="signupForm">
-                <div class="input-group">
-                  <div class="input-field">
-                    <input type="text" placeholder="name" id="nameField">
-                  </div>
-                  <div class="input-field">
-                    <input type="email" placeholder="email" id="email">
-                  </div>
-                  <div class="input-field">
-                    <input type="password" placeholder="password" id="password">
-                  </div>
+            <div class="signcontainer">
+                <div class="content-wrapper">
+                    <div class="form-box">
+                        <h1 id="title">Sign Up</h1>
+                        <form id="signupForm">
+                            <div class="input-group">
+                                <div class="input-field">
+                                    <input type="text" placeholder="Name" id="nameField" required>
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" placeholder="Email" id="emailField" required>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" placeholder="Password" id="password" required>
+                                </div>
+                            </div>
+                            <div class="btn-field">
+                                <button type="submit" id="submit">Submit</button>
+                                <button type="button" id="signinBtn" class="disable">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="userlist">
+                        <h3>User Information</h3>
+                        <div id="currentUser" class="current-user">
+                            <p>Currently logged in: <span id="loggedInUser">None</span></p>
+                        </div>
+                        <h4>All Users:</h4>
+                        <ul id="ul"></ul>
+                    </div>
                 </div>
-                <div class="btn-field">
-                <button type="button" id="signupBtn">Sign up</button>
-                <button type="button" id="signinBtn" class="disable">Sign in</button>
-                <button type="submit" id="submit">Submit</button>
-                </div>
-                </form>
             </div>
-          
-            <div class="userlist">
-              <h3>User Information</h3>
-              <div id="currentUser" class="current-user">
-                <p>Currently logged in: <span id="loggedInUser">None</span></p>
-              </div>
-              <h4>All Users:</h4>
-              <ul id="ul">
-              </ul>
-            </div>
-          </div>
         </div>
-    </div>
-      </section>
-      <footer>
+    </section>
+
+    <section id="data" style="display: none;">
+        <h1 class="he">Expense Tracker</h1>
+        <main>
+            <header>
+                <div>
+                    <h5>Total Balance</h5>
+                    <span id="balance">$0.00</span>
+                </div>
+                <div>
+                    <h5>Income</h5>
+                    <span id="income">$0.00</span>
+                </div>
+                <div>
+                    <h5>Expense</h5>
+                    <span id="expense">$0.00</span>
+                </div>
+            </header>
+    
+            <section>
+                <h3>Transactions</h3>
+                <ul id="transactionList"></ul>
+                <div id="status"></div>
+            </section>
+    
+            <section>
+                <h3>Add Transaction</h3>
+                <form id="transactionForm">
+                    <div>
+                        <label for="type">
+                            <input type="checkbox" name="type" id="type" />
+                            <div class="option">
+                                <span>Expense</span>
+                                <span>Income</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" required />
+                    </div>
+                    <div>
+                        <label for="amount">Amount</label>
+                        <input type="number" name="amount" value="0" min="0.01" step="0.01" required />
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" name="date" required />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </section>
+
+    <footer>
         <div class="footer-logo"><span style="color: #e74c3c;">MONEY</span> MAP</div>
         <div class="footer-text">Your Complete Financial Solution</div>
         <div class="social-icons">
@@ -154,72 +207,90 @@
             </a>
         </div>
     </footer>
-    
 
-<script>  
+<script>
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
 
-// Function to scroll to signup section
 function scrollToSignup() {
     const signupSection = document.getElementById('signup');
     signupSection.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Add event listener for the SIGN-UP button in the home section
-document.addEventListener('DOMContentLoaded', function() {
-    const signupButton = document.getElementById("signupButton");
-    if (signupButton) {
-        signupButton.addEventListener('click', scrollToSignup);
-    }
-});
+document.getElementById('signupButton').addEventListener('click', scrollToSignup);
 
-// Rest of your existing code
 window.onload = function() {
-    let signupBtn = document.getElementById("signupBtn");
-    let signinBtn = document.getElementById("signinBtn");
-    let nameField = document.getElementById("nameField");
-    let title = document.getElementById("title");
-    let form = document.getElementById("signupForm");
-    let userList = document.getElementById("ul");
-    let loggedInUserSpan = document.getElementById("loggedInUser");
+    const signupBtn = document.getElementById("signupButton");
+    const signinBtn = document.getElementById("signinBtn");
+    const nameField = document.getElementById("nameField");
+    const emailField = document.getElementById("emailField");
+    const title = document.getElementById("title");
+    const form = document.getElementById("signupForm");
+    const userList = document.getElementById("ul");
+    const loggedInUserSpan = document.getElementById("loggedInUser");
+    const expenseTrackerSection = document.getElementById("data");
+
+    const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+    const balance = document.getElementById("balance");
+    const income = document.getElementById("income");
+    const expense = document.getElementById("expense");
+    const transactionList = document.getElementById("transactionList");
+    const transactionForm = document.getElementById("transactionForm");
+    const status = document.getElementById("status");
 
     signinBtn.onclick = function() {
-        nameField.style.display = "none";
         title.innerHTML = "Sign In";
         signupBtn.classList.add("disable");
         signinBtn.classList.remove("disable");
-    }
+        emailField.value = ""; // Clear email field
+    };
 
     signupBtn.onclick = function() {
-        nameField.style.display = "block";
         title.innerHTML = "Sign Up";
+        signupBtn.classList.remove("disable");
         signinBtn.classList.add("disable");
-        signupBtn.classList.remove("disable");       
-    }
+    };
 
     form.onsubmit = function(e) {
         e.preventDefault();
-        let name = document.getElementById("nameField").value;
-        let email = document.getElementById("email").value;
+        let name = nameField.value;
+        let email = emailField.value;
         let password = document.getElementById("password").value;
 
-        if (name && email && password) {
-            let user = { name: name, email: email, password: password };
-            let users = JSON.parse(localStorage.getItem("all_users")) || [];
-            users.push(user);
-            localStorage.setItem("all_users", JSON.stringify(users));
-
-            sessionStorage.setItem("currentUser", JSON.stringify(user));
-
-            addUserToList(name);
-            updateLoggedInUser();
-            form.reset();
+        if (title.innerHTML === "Sign Up") {
+            if (name && email && password) {
+                let user = { name, email, password };
+                let users = JSON.parse(localStorage.getItem("all_users")) || [];
+                users.push(user);
+                localStorage.setItem("all_users", JSON.stringify(users));
+                sessionStorage.setItem("currentUser", JSON.stringify(user));
+                addUserToList(name);
+                updateLoggedInUser();
+                form.reset();
+                showExpenseTracker(); 
+            } else {
+                alert("Please fill in all fields");
+            }
         } else {
-            alert("Please fill in all fields");
+         
+            let existingUsers = JSON.parse(localStorage.getItem("all_users")) || [];
+            let foundUser = existingUsers.find(u => u.email === email && u.password === password);
+            if (foundUser) {
+                sessionStorage.setItem("currentUser", JSON.stringify(foundUser));
+                updateLoggedInUser();
+                form.reset();
+                showExpenseTracker(); 
+            } else {
+                alert("Invalid email or password");
+            }
         }
+    };
+
+    function showExpenseTracker() {
+        expenseTrackerSection.style.display = "block"; 
+        updateTotal(); 
     }
 
     function addUserToList(name) {
@@ -237,12 +308,302 @@ window.onload = function() {
         }
     }
 
-    // Load existing users on page load
     let users = JSON.parse(localStorage.getItem("all_users")) || [];
     users.forEach(user => addUserToList(user.name));
     updateLoggedInUser();
+
+    function updateTotal() {
+        const incomeTotal = transactions
+            .filter(trx => trx.type === "income")
+            .reduce((total, trx) => total + trx.amount, 0);
+    
+        const expenseTotal = transactions
+            .filter(trx => trx.type === "expense")
+            .reduce((total, trx) => total + trx.amount, 0);
+    
+        const balanceTotal = incomeTotal - expenseTotal;
+    
+        balance.textContent = `$${balanceTotal.toFixed(2)}`;
+        income.textContent = `$${incomeTotal.toFixed(2)}`;
+        expense.textContent = `$${expenseTotal.toFixed(2) * -1}`;
+    }
+
+    function renderList() {
+        transactionList.innerHTML = "";
+        status.textContent = "";
+        if (transactions.length === 0) {
+            status.textContent = "No transactions.";
+            return;
+        }
+
+        transactions.forEach(({ id, name, amount, date, type }) => {
+            const sign = type === "income" ? 1 : -1;
+
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div class="name">
+                    <h4>${name}</h4>
+                    <p>${new Date(date).toLocaleDateString()}</p>
+                </div>
+                <div class="amount ${type}">
+                    <span>${(amount * sign).toFixed(2)}</span>
+                </div>
+                <div class="action">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" onclick="deleteTransaction(${id})">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+            `;
+            transactionList.appendChild(li);
+        });
+    }
+
+    function deleteTransaction(id) {
+        const index = transactions.findIndex(trx => trx.id === id);
+        transactions.splice(index, 1);
+        updateTotal();
+        saveTransactions();
+        renderList();
+    }
+
+    transactionForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        transactions.push({
+            id: transactions.length + 1,
+            name: formData.get("name"),
+            amount: parseFloat(formData.get("amount")),
+            date: new Date(formData.get("date")),
+            type: document.getElementById("type").checked ? "income" : "expense",
+        });
+
+        this.reset();
+        updateTotal();
+        saveTransactions();
+        renderList();
+    });
+
+    function saveTransactions() {
+        localStorage.setItem("transactions", JSON.stringify(transactions));
+    }
+
+    renderList();
+    updateTotal();
 }
-    </script>
+</script>
     
 </body>
 </html>
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="serv.css">
+ </head>
+ <body>
+ 
+ <nav class="navbar">
+     <a href="#" class="navbar-brand"><span>MONEY</span> <span>MAP</span></a>
+     <div class="menu-toggle" onclick="toggleMenu()">
+         <span></span>
+         <span></span>
+         <span></span>
+     </div>
+     <div class="nav-links">
+         <a href="#home">HOME</a>
+         <a href="#services">SERVICES</a>
+         <a href="#contact">CONTACT</a>
+         <a href="#signup" class="login-btn">-LOGIN-</a>
+     </div>
+ </nav>
+ 
+ <section id="home">
+     <div class="container">
+         <div class="title"><span class="red">M</span>ONEY <span class="red">M</span>AP</div>
+         <div class="text">
+             <div class="text-line">Welcome To</div>
+             <div class="text-line-2">Expense Tracker</div>
+             <div class="text-line-2">Application</div>
+             <button type="button" id="signupButton"><a href="#signup">SIGN-UP</a></button>
+         </div>
+     </div>
+ </section>
+ 
+ <section id="services">
+     <div class="text-services">
+         <div class="heading">SERV<span class="red">I</span>CES</div>
+         <div class="para">
+             <p class="descr">MoneyMap provides many services to the customers. Financial solutions to meet your needs whatever your money goals, there is MoneyMap solution to help you reach them.</p>
+         </div>
+     </div>
+     <div class="cardcontainer">
+         <div class="card">
+             <div class="overlay">
+                 <h2 class="card-title">PERSONAL EXPENSES</h2>
+                 <p class="card-matter">Budgeting is more than paying bills and setting aside servicing. It's about creating a money plan for the life you want.</p>
+             </div>
+         </div>
+         <div class="card">
+             <div class="overlay">
+                 <h2 class="card-title">FINANCIAL LIFE</h2>
+                 <p class="card-matter">Get your complete financial picture at a glance. With MoneyMap application you can view all your financial activities.</p>
+             </div>
+         </div>
+         <div class="card">
+             <div class="overlay">
+                 <h2 class="card-title">INVESTMENTS</h2>
+                 <p class="card-matter">Follow your investments and bring your portfolio into focus with support for stocks, bonds, CDs, mutual funds, and more.</p>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <section id="contact" class="contact">
+     <div class="info">
+         <div class="tit">
+             <span>CONTACT </span><span class="red">INFO</span>
+         </div>
+     </div>
+     <div class="content">
+         <div class="wrapper">
+             <img src="phone-png-3.png" alt="Phone icon">
+             <h3>Phone</h3>
+             <p>+1 234 123 1234</p>
+             <p>+1 234 123 1234</p>
+         </div>
+         <div class="wrapper">
+             <img src="email-icon.png" alt="Email icon">
+             <h3>Email</h3>
+             <p>am8819356@gmail.com</p>
+             <p>am8819356@gmail.com</p>
+         </div>
+         <div class="wrapper">
+             <img src="address-icon-1.png" alt="Address icon">
+             <h3>Address</h3>
+             <p>Kamboj Colony, Shamli</p>
+             <p>Uttar Pradesh, India</p>
+         </div>
+     </div>
+ </section>
+ 
+ <section id="signup">
+     <div class="outer">
+         <div class="signcontainer">
+             <div class="content-wrapper">
+                 <div class="form-box">
+                     <h1 id="title">Sign Up</h1>
+                     <form id="authForm">
+                         <div class="input-group">
+                             <div class="input-field">
+                                 <input type="text" placeholder="Name" id="nameField" required>
+                             </div>
+                             <div class="input-field">
+                                 <input type="email" placeholder="Email" id="emailField" required>
+                             </div>
+                             <div class="input-field">
+                                 <input type="password" placeholder="Password" id="passwordField" required>
+                             </div>
+                         </div>
+                         <div class="btn-field">
+                             <button type="submit" id="submit">Submit</button>
+                             <button type="button" id="switchToSignIn">Switch to Sign In</button>
+                         </div>
+                     </form>
+                 </div>
+                 <div class="userlist">
+                     <h3>User Information</h3>
+                     <div id="currentUser" class="current-user">
+                         <p>Currently logged in: <span id="loggedInUser">None</span></p>
+                     </div>
+                     <h4>All Users:</h4>
+                     <ul id="ul"></ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <section id="data" style="display: none;">
+     <h1 class="he">Expense Tracker</h1>
+     <main>
+         <header>
+             <div>
+                 <h5>Total Balance</h5>
+                 <span id="balance">$0.00</span>
+             </div>
+             <div>
+                 <h5>Income</h5>
+                 <span id="income">$0.00</span>
+             </div>
+             <div>
+                 <h5>Expense</h5>
+                 <span id="expense">$0.00</span>
+             </div>
+         </header>
+ 
+         <section>
+             <h3>Transactions</h3>
+             <ul id="transactionList"></ul>
+             <div id="status"></div>
+         </section>
+ 
+         <section>
+             <h3>Add Transaction</h3>
+             <form id="transactionForm">
+                 <div>
+                     <label for="type">
+                         <input type="checkbox" name="type" id="type" />
+                         <div class="option">
+                             <span>Expense</span>
+                             <span>Income</span>
+                         </div>
+                     </label>
+                 </div>
+                 <div>
+                     <label for="name">Name</label>
+                     <input type="text" name="name" required />
+                 </div>
+                 <div>
+                     <label for="amount">Amount</label>
+                     <input type="number" name="amount" value="0" min="0.01" step="0.01" required />
+                 </div>
+                 <div>
+                     <label for="date">Date</label>
+                     <input type="date" name="date" required />
+                 </div>
+                 <button type="submit">Submit</button>
+             </form>
+         </section>
+     </main>
+ </section>
+ 
+ <footer>
+     <div class="footer-logo"><span style="color: #e74c3c;">MONEY</span> MAP</div>
+     <div class="footer-text">Your Complete Financial Solution</div>
+     <div class="social-icons">
+         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+             <img class="img" src="fb.png" alt="Facebook">
+         </a>
+         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+             <img class="img" src="insta.avif" alt="Instagram">
+         </a>
+         <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+             <img class="img" src="twitterjpg.jpg" alt="Twitter">
+         </a>
+         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+             <img class="img" src="linked-in.png" alt="LinkedIn">
+         </a>
+     </div>
+ </footer>
+ 
+ <script src="script.js">
+ 
+ </script>
+ </body>
+ </html>
+ 
